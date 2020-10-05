@@ -1,6 +1,6 @@
 module.exports = {
-    name: 'mute',
-    description: 'This command mutes everyone in a voice channel.',
+    name: 'unmute',
+    description: 'This command unmutes everyone in a voice channel.',
     async execute(message, args){
         console.log(args);
         var channel_name = args.join(" ");
@@ -9,8 +9,8 @@ module.exports = {
         console.log(vc);
         for (const [channelID, channel] of vc) {
             for (const [memberID, member] of channel.members) {
-                    message.channel.send(`Muting ${member.user.username}`)
-                    member.voice.setMute(true)
+                    message.channel.send(`Unmuting ${member.user.username}`)
+                    member.voice.setMute(false)
             }
           }
     }
