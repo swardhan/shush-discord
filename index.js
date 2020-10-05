@@ -24,12 +24,6 @@ client.on('message', (message) => {
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
-    // if(command === 'mute'){
-    //     client.commands.get('mute').execute(message, args);
-    // }
-    // else if(command == 'unmute'){
-    //     client.commands.get('mute').execute(message, args);
-    // }
     client.commands.get(command).execute(message, args);
 
     
