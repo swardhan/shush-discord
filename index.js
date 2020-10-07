@@ -1,7 +1,5 @@
 const Discord = require('discord.js')
 const fs = require('fs');
-const config = require('./config.js');
-
 
 const client = new Discord.Client();
 
@@ -29,9 +27,9 @@ client.on('message', (message) => {
     client.commands.get(command).execute(message, args);
 });
 
-var locally = true;
-
 if(environment == 'dev'){
+    let rawdata = fs.readFileSync('config.json');
+    let config = JSON.parse(rawdata)
     client.login(config.key);
 }else{
     client.login(process.env.key);
