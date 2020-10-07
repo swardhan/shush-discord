@@ -26,5 +26,10 @@ client.on('message', (message) => {
     const command = args.shift().toLowerCase();
     client.commands.get(command).execute(message, args);
 });
+var locally = true;
 
-client.login(config.key);
+if(locally){
+    client.login(config.key);
+}else{
+    client.login(process.env.key);
+}
