@@ -1,7 +1,7 @@
 # shush-discord
-A discord bot to mute everyone connected in a voice channel.
+A discord bot to mute/unmute users connected in a voice channel.
 
-# Comnmands:
+# Commands:
 
 # !toggle <voice channel name>
   Toggles the mute state of the users. Basically, mutes users in the voice channel who were unmute and unmutes those who were mute.
