@@ -27,4 +27,10 @@ client.on('message', (message) => {
     client.commands.get(command).execute(message, args);
 });
 
-client.login(config.key);
+var locally = true;
+
+if(locally){
+    client.login(config.key);
+}else{
+    client.login(process.env.key);
+}
