@@ -11,9 +11,9 @@ A discord bot to mute/unmute users connected in a voice channel.
 **!mute <voice chanel name>**
   Mutes all the users in the voice channel
   Example:
-  !mute csgo
+  ## !mute csgo
   
 **!unmute <voice channel name>**
   Unmutes all the users in the voice channel
   Example:
-  !unmute deceit
+  ## !unmute deceit
